@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a Car Rental Reservation System management backend api creation project, which is using Mongoose for MongoDB interaction and Node.js for server, also used TypeScript.
+This is Portfolio backend api creation project, which is using Mongoose for MongoDB interaction and Node.js for server, also used TypeScript.
 
 ## Features
 
@@ -12,7 +12,7 @@ This is a Car Rental Reservation System management backend api creation project,
 
 ## Steps
 
-1. Clone the Repository --- https://github.com/keyamoni05866/carRental-reservation-system-server-with-mongoose <br>
+1. Clone the Repository --- https://github.com/keyamoni05866/portfolio-backend<br>
 2. Install Dependencies. --- npm install <br>
 3. Set up the Env variables:<br>
 
@@ -25,10 +25,6 @@ This is a Car Rental Reservation System management backend api creation project,
   JWT_ACCESS_EXPIRES_IN= use expiration time<br>
   JWT_REFRESH_SECRET=use refresh secret<br>
   JWT_REFRESH_EXPIRES_IN=use expire time<br>
-  STORE_ID=amarpay store id<br>
-  SIGNATURE_KEY= amarpay signature key<br>
-  PAYMENT_URL=payment url<br>
-  PAYMENT_VERIFY_URL=payment verify url<br>
 
 ## Running the server
 
@@ -39,4 +35,4 @@ This is a Car Rental Reservation System management backend api creation project,
 
 ## Live Link-
 
-https://car-rental-reservation-server-three.vercel.app/
+https://portfolio-server-rosy-pi.vercel.app/
