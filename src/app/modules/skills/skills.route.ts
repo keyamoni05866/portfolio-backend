@@ -7,7 +7,7 @@ const router = express.Router();
 //creating skill Route
 router.post(
   "/create-skill",
-  //   auth(USER_Role.admin),
+  auth(USER_Role.admin),
 
   SkillControllers.createSkill
 );
@@ -19,14 +19,10 @@ router.get("/", SkillControllers.getAllSkills);
 router.patch(
   "/update-skill/:id",
 
-  //   auth(USER_Role.admin),
+  auth(USER_Role.admin),
   SkillControllers.updateASkill
 );
 //delete skill route
-router.delete(
-  "/:id",
-  //  auth(USER_Role.admin),
-  SkillControllers.deleteSkill
-);
+router.delete("/:id", auth(USER_Role.admin), SkillControllers.deleteSkill);
 
 export const SkillRoutes = router;

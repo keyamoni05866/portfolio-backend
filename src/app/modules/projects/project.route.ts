@@ -8,7 +8,7 @@ const router = express.Router();
 //creating  Route
 router.post(
   "/create-project",
-  //   auth(USER_Role.admin),
+  auth(USER_Role.admin),
 
   ProjectControllers.createProject
 );
@@ -21,14 +21,10 @@ router.get("/:id", ProjectControllers.getSingleProject);
 router.patch(
   "/update-project/:id",
 
-  //   auth(USER_Role.admin),
+  auth(USER_Role.admin),
   ProjectControllers.updateAProject
 );
 //delete  route
-router.delete(
-  "/:id",
-  //  auth(USER_Role.admin),
-  ProjectControllers.deleteProject
-);
+router.delete("/:id", auth(USER_Role.admin), ProjectControllers.deleteProject);
 
 export const ProjectRoutes = router;

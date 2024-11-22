@@ -8,7 +8,7 @@ const router = express.Router();
 //creating  Route
 router.post(
   "/create-blog",
-  //   auth(USER_Role.admin),
+  auth(USER_Role.admin),
 
   BlogControllers.createBlog
 );
@@ -21,14 +21,10 @@ router.get("/:id", BlogControllers.getSingleBlog);
 router.patch(
   "/update-blog/:id",
 
-  //   auth(USER_Role.admin),
+  auth(USER_Role.admin),
   BlogControllers.updateABlog
 );
 //delete  route
-router.delete(
-  "/:id",
-  //  auth(USER_Role.admin),
-  BlogControllers.deleteBlog
-);
+router.delete("/:id", auth(USER_Role.admin), BlogControllers.deleteBlog);
 
 export const BlogRoutes = router;
